@@ -1,0 +1,9 @@
+#!/bin/bash
+# this file contains all commands to compile and install the daemon
+
+chmod +x share/genbuild.sh src/leveldb/build_detect_platform autogen.sh
+
+./autogen.sh
+./configure
+make -j4
+sudo make install
